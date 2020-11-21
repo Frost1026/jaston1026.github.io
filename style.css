@@ -4,7 +4,7 @@ body {
   background-color: #0083d4;
 }
 
-headerimg {
+.headerimg {
   height: 150px;
   width: 150px;
   border-radius: 10%;
