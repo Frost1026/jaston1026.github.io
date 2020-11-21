@@ -1,8 +1,11 @@
 body {
   font-family: "Lato", sans-serif;
+  text-align: center;
+  background-color: #0083d4;
 }
 
 headerimg {
-  height: 50px;
-  width: 50px
+  height: 150px;
+  width: 150px;
+  border-radius: 10%;
 }
