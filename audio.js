@@ -16,14 +16,16 @@ function up(event) {
   dragging = false;
   synth.triggerRelease();
   label.innerHTML = "CLICK & DRAG";
+  pad.style.backgroundColor = 'black';
 }
 
 function move(event) {
   if (dragging) {
       var x = event.pageX;
-      var y = event.pageY;
+      var xDf = event.offsetX;
+      var yDf = event.offsetY;
       synth.setNote(x);
       label.innerHTML = Math.round(x) + "Hz";
-      pad.style.backgroundColor = "rgb(${x}, ${y}, ${x - y})";
+      pad.style.backgroundColor =  'rgb(‘+x+’,’+y+’,100)';
   }
 }
