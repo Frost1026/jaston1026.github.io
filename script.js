@@ -1,24 +1,27 @@
 var synth = new Tone.Synth().toMaster();
+var dragging
 
 var pad = document.getElementById('pad')
 var label = document.getElementById('label')
 
-var mouseCoord = function(event){
-  var x = event.pageX
-  synth.triggerAttack(x)
-  label.innerHTML = Math.round(x) + 'Hz'
-  pad.style.backgroundColor = 'rgb '
-}
-
 function held(event) {
-  mouseCoord
+  dragging = true
 }
 
 function release(event) {
+  dragging = false
   synth.triggerRelease()
   label.innerHTML = 'CLICK / DRAG'
 }
 
+function moving(event) {
+  if (dragging) {
+      var x = event.pageX
+      synth.setNote(x)
+      label.innerHTML = Math.round(x) + 'Hz'
+  }
+}
+
 pad.addEventListener('pointerdown', held)
 pad.addEventListener('pointerup', release)
-pad.addEventListener('pointermove', mouseCoord)
+pad.addEventListener('pointermove', moving)
