@@ -7,6 +7,7 @@ var mouseCoord = function(event){
   var x = event.pageX
   synth.triggerAttack(x)
   label.innerHTML = Math.round(x) + 'Hz'
+  pad.style.backgroundColor = 'rgb '
 }
 
 function held(event) {
