@@ -1,4 +1,4 @@
-var synth = new Tone.Synth().toMaster();
+var synth = new Tone.Synth().toDestination();
 var dragging;
 
 var pad = document.getElementById("pad");
