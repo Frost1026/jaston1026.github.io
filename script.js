@@ -4,17 +4,17 @@ var dragging;
 var pad = document.getElementById('pad');
 var label = document.getElementById('label');
 
-function held(event) {
+function down(event) {
   dragging = true;
 }
 
-function release(event) {
+function up(event) {
   dragging = false;
   synth.triggerRelease();
   label.innerHTML = 'CLICK / DRAG';
 }
 
-function moving(event) {
+function move(event) {
   if (dragging) {
       var x = event.pageX;
       synth.setNote(x);
@@ -22,6 +22,6 @@ function moving(event) {
   }
 }
 
-pad.addEventListener('pointerdown', held);
-pad.addEventListener('pointerup', release);
-pad.addEventListener('pointermove', moving);
+pad.addEventListener('pointerdown', down);
+pad.addEventListener('pointerup', up);
+pad.addEventListener('pointermove', move);
