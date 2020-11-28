@@ -1,5 +1,5 @@
 var synth = new Tone.Synth().toMaster();
-var dragging;
+var dragging = false;
 
 var pad = document.getElementById("pad");
 var label = document.getElementById("label");
