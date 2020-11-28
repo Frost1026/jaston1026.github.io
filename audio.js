@@ -27,6 +27,6 @@ function move(event) {
       synth.triggerAttack(x);
       synth.setNote(x);
       label.innerHTML = Math.round(x) + "Hz";
-      pad.style.backgroundColor =  'rgb(‘+xDf+’,’+yDf+’,100)';
+      pad.style.color =  "rgb(‘+xDf+’,’+yDf+’,100)";
   }
 }
