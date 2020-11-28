@@ -1,4 +1,4 @@
-var synth = new Tone.Synth().toDestination();
+var synth = new Tone.Synth().toMaster();
 var dragging;
 
 var pad = document.getElementById("pad");
@@ -21,7 +21,9 @@ function up(event) {
 function move(event) {
   if (dragging) {
       var x = event.pageX;
+      var y = event.pageY;
       synth.setNote(x);
       label.innerHTML = Math.round(x) + "Hz";
+      pad.style.backgroundColor = "rgb(${x}, ${y}, ${x - y})";
   }
 }
