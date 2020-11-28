@@ -15,7 +15,7 @@ function down(event) {
 function up(event) {
   dragging = false;
   synth.triggerRelease();
-  label.innerHTML = "CLICK / DRAG";
+  label.innerHTML = "CLICK & DRAG";
 }
 
 function move(event) {
