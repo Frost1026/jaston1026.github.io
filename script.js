@@ -4,6 +4,10 @@ var dragging;
 var pad = document.getElementById("pad");
 var label = document.getElementById("label");
 
+pad.addEventListener('pointerdown', down);
+pad.addEventListener('pointerup', up);
+pad.addEventListener('pointermove', move);
+
 function down(event) {
   dragging = true;
 }
@@ -21,7 +25,3 @@ function move(event) {
       label.innerHTML = Math.round(x) + 'Hz';
   }
 }
-
-pad.addEventListener('pointerdown', down);
-pad.addEventListener('pointerup', up);
-pad.addEventListener('pointermove', move);
