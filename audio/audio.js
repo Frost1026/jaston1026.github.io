@@ -24,7 +24,7 @@ function move(event) {
       var x = event.pageX;
       var xDf = event.offsetX;
       var yDf = event.offsetY;
-      synth.triggerAttack(x)
+      synth.triggerAttack(x);
       synth.setNote(x);
       label.innerHTML = Math.round(x) + "Hz";
       pad.style.backgroundColor =  'rgb(‘+x+’,’+y+’,100)';
