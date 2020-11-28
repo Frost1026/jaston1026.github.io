@@ -1,8 +1,8 @@
 var synth = new Tone.Synth().toMaster();
 var dragging;
 
-var pad = document.getElementById('pad');
-var label = document.getElementById('label');
+var pad = document.getElementById("pad");
+var label = document.getElementById("label");
 
 function down(event) {
   dragging = true;
