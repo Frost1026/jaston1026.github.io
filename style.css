@@ -25,6 +25,7 @@ body {
 }
 
 #pad {
+  background-color: black;
   position: absolute;
   top: 0;
   bottom: 0;

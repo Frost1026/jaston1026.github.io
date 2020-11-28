@@ -4,10 +4,6 @@ var dragging = false;
 var pad = document.getElementById("pad");
 var label = document.getElementById("label");
 
-pad.addEventListener("pointerdown", down);
-pad.addEventListener("pointerup", up);
-pad.addEventListener("pointermove", move);
-
 function down(event) {
   dragging = true;
 }
@@ -29,3 +25,7 @@ function move(event) {
       pad.style.backgroundColor =  'rgb(‘+x+’,’+y+’,100)';
   }
 }
+
+pad.addEventListener("pointerdown", down);
+pad.addEventListener("pointerup", up);
+pad.addEventListener("pointermove", move);
